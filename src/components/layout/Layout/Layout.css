@@ -1,0 +1,20 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.layout__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: var(--space-20); /* Account for fixed header */
+}
+
+@media (min-width: 992px) {
+  .layout__main {
+    padding-top: var(--space-24);
+  }
+}

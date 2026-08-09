@@ -1,0 +1,15 @@
+.food-filters { display: grid; gap: var(--space-4); margin-bottom: var(--space-8); }
+.food-filter-group { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+.food-filter-label { font-weight: var(--weight-semibold); color: var(--color-text-primary); }
+.food-filter-btns { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.food-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-6); }
+.food-card { padding: var(--space-6); border-radius: var(--radius-xl); transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out); }
+.food-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
+.food-card__header { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-3); }
+.food-card__emoji { font-size: 2.5rem; line-height: 1; }
+.food-card__tags { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--space-2); }
+.food-card__name { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-text-primary); margin: var(--space-4) 0 var(--space-2); }
+.food-card__desc, .food-card__section-text { color: var(--color-text-secondary); font-size: var(--text-sm); line-height: var(--leading-relaxed); }
+.food-card__section { border-top: 1px solid var(--color-border-primary); margin-top: var(--space-4); padding-top: var(--space-4); }
+.food-card__section-title { display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm); margin-bottom: var(--space-2); color: var(--color-text-primary); }
+@media (max-width: 640px) { .food-grid { grid-template-columns: 1fr; } }

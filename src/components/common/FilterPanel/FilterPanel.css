@@ -1,0 +1,131 @@
+.filter-panel {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border-primary);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--color-border-primary);
+  background-color: var(--color-bg-tertiary);
+}
+
+.filter-panel__title {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-lg);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.filter-panel__clear {
+  font-size: var(--text-xs);
+  color: var(--color-text-link);
+  font-weight: var(--weight-medium);
+  transition: color var(--duration-fast);
+}
+
+.filter-panel__clear:hover {
+  color: var(--color-primary-600);
+  text-decoration: underline;
+}
+
+.filter-panel__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-section {
+  border-bottom: 1px solid var(--color-border-primary);
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+}
+
+.filter-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-4);
+  background: transparent;
+  color: var(--color-text-primary);
+  transition: background-color var(--duration-fast);
+}
+
+.filter-section__header:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.filter-section__title {
+  font-weight: var(--weight-medium);
+  font-size: var(--text-sm);
+}
+
+.filter-section__content {
+  overflow: hidden;
+}
+
+.filter-list {
+  padding: 0 var(--space-4) var(--space-4) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.filter-list__item {
+  display: flex;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+  width: 100%;
+  padding: var(--space-1) 0;
+}
+
+.filter-checkbox:hover .filter-checkbox__box:not(.filter-checkbox__box--selected) {
+  border-color: var(--color-border-focus);
+}
+
+.filter-checkbox__box {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all var(--duration-fast);
+  background-color: var(--color-bg-primary);
+}
+
+.filter-checkbox__box--selected {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+}
+
+.filter-checkbox__label {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.filter-checkbox:hover .filter-checkbox__label {
+  color: var(--color-text-primary);
+}
+
+.filter-checkbox__count {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+}
